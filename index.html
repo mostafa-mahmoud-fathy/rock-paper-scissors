@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock paper scissors</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="score-board">
+    <img src="images/logo.svg" alt="logo">
+    <div id="score-section">
+      <span>SCORE</span>
+      <span id="score" >0</span>
+    </div>
+  </div>
+  <div class="game-board">
+    <img src="images/bg-triangle.svg" alt="triangle">
+    <div class="paper" onclick="handleUserPick('paper')">
+      <div class="outter-container">
+        <div class="circle-button">
+          <div class="inner-container">
+            <div class="inner-circle">
+              <img src="images/icon-paper.svg" alt="paper">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scissors" onclick="handleUserPick('scissors')">
+      <div class="outter-container">
+        <div class="circle-button">
+          <div class="inner-container">
+            <div class="inner-circle">
+              <img src="images/icon-scissors.svg" alt="scissors">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rock" onclick="handleUserPick('rock')">
+      <div class="outter-container">
+        <div class="circle-button">
+          <div class="inner-container">
+            <div class="inner-circle">
+              <img src="images/icon-rock.svg" alt="rock">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="rulesModal" class="overlay hidden">
+    <div class="modal">
+        <h2>RULES</h2>
+        <img src="images/image-rules.svg" alt="Rules Diagram" class="rules-img">
+        <img src="images/icon-close.svg" class="close-btn" alt="Close" onclick="closeModal()">
+    </div>
+  </div>
+  <div class="result-board hidden">
+    <div class="result-option">
+      <h3>YOU PICKED</h3>
+      <div class="choice-wrapper" id="user-pick"></div>
+    </div>
+
+    <div class="result-center">
+      <h2 id="result-text"></h2>
+      <button id="play-again" onclick="playAgain()">PLAY AGAIN</button>
+    </div>
+    <div class="result-option">
+      <h3>THE HOUSE PICKED</h3>
+      <div class="choice-wrapper" id="house-pick"></div>
+    </div>
+  </div>
+  <button class="rules" onclick="openModal()">RULES</button>
+
+  <script src="Script/script.js"></script>
+</body>
+</html>
